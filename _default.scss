@@ -1,0 +1,13 @@
+$min-width: 360px;
+$img-url: "../images";
+
+$screen-size-pc1: 900px;
+$screen-size-pc2: 1200px;
+$screen-size-pc3: 1400px;
+$screen-size-mobile: max($screen-size-pc1);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

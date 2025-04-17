@@ -1,0 +1,372 @@
+// out: ./styl.css, compress: true, sourceMap: true
+@use "normalize";
+@use "font";
+@use "mixin";
+@use "default";
+
+/* basic */
+
+html {
+  min-width: default.$min-width;
+  max-width: 100%;
+  font-size: 14px;
+  height: -webkit-fill-available;
+}
+
+html,
+body {
+  //   font-family: $myfont, "Malgun Gothic", "apple sd gothic neo", sans-serif;
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  background: #393939;
+  word-break: keep-all;
+
+  section.head {
+    padding: 20px 15px;
+    color: #fff;
+    height: 150px;
+
+    @media (min-width: default.$screen-size-pc1) {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: calc(100% - 700px);
+      height: auto;
+      text-align: right;
+      padding: 40px 30px;
+    }
+
+    @media (min-width: default.$screen-size-pc2) {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: calc(100% - 900px);
+    }
+
+    @media (min-width: default.$screen-size-pc3) {
+      width: calc(50% - 200px);
+    }
+
+    h1 {
+      font-size: 22px;
+      font-weight: 900;
+      text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4);
+
+      @media (min-width: default.$screen-size-pc1) {
+        font-size: 24px;
+
+        span {
+          display: block;
+        }
+      }
+
+      @media (min-width: default.$screen-size-pc2) {
+        font-size: 32px;
+      }
+
+      @media (min-width: default.$screen-size-pc3) {
+        font-size: 44px;
+      }
+    }
+
+    p.description {
+      opacity: 0.6;
+      line-height: 1.4;
+
+      span {
+        display: block;
+      }
+    }
+  }
+
+  section.chat-box {
+    text-align: right;
+
+    .container {
+      position: relative;
+      display: inline-block;
+      margin: 0 auto;
+      height: 100%;
+      text-align: left;
+      vertical-align: top;
+      width: 100%;
+      padding: 0 15px;
+      background: #ccc;
+      backdrop-filter: blur(10px);
+      word-break: keep-all;
+      min-height: calc(100vh - 150px);
+
+      @media (min-width: default.$screen-size-pc1) {
+        width: 700px;
+        min-height: 100vh;
+      }
+
+      @media (min-width: default.$screen-size-pc2) {
+        position: absolute;
+        right: 200px;
+        top: 0;
+      }
+
+      @media (min-width: default.$screen-size-pc3) {
+        right: auto;
+        left: 50%;
+        transform: translateX(-200px);
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 240px;
+        background: linear-gradient(
+          to bottom,
+          rgba(204, 204, 204, 0) 0%,
+          rgba(204, 204, 204, 1) 30%
+        );
+      }
+
+      div.chat-text {
+        position: absolute;
+
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        overflow-y: auto;
+        padding: 20px 15px 65px;
+
+        @media (min-width: default.$screen-size-pc1) {
+          padding: 40px 30px 65px;
+        }
+
+        div.information {
+          margin: 0 0 30px;
+          h2 {
+            small {
+              display: block;
+              font-size: 16px;
+              margin: 0 0 4px;
+            }
+
+            span {
+              font-size: 22px;
+            }
+          }
+
+          div.text {
+            background: rgba(255, 255, 255, 0.4);
+            padding: 20px 20px 10px;
+            border-radius: 20px;
+            font-size: 16px;
+
+            p {
+              margin: 0 0 10px;
+            }
+          }
+        }
+
+        div.survey {
+          padding: 10px 0 0;
+
+          strong {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 14px;
+            line-height: 30px;
+            padding: 0 10px;
+          }
+
+          button {
+            border: none;
+            width: 34px;
+            height: 30px;
+            border-radius: 6px;
+            font-size: 0;
+
+            @media (min-width: default.$screen-size-pc1) {
+              width: auto;
+              font-size: 14px;
+              padding: 0 10px 0 30px;
+            }
+
+            &.good {
+              background: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23000'%3E%3Cpath d='M840-640q32 0 56 24t24 56v80q0 7-1.5 15t-4.5 15L794-168q-9 20-30 34t-44 14H400q-33 0-56.5-23.5T320-200v-407q0-16 6.5-30.5T344-663l217-216q15-14 35.5-17t39.5 7q19 10 27.5 28t3.5 37l-45 184h218ZM160-120q-33 0-56.5-23.5T80-200v-360q0-33 23.5-56.5T160-640q33 0 56.5 23.5T240-560v360q0 33-23.5 56.5T160-120Z'/%3E%3C/svg%3E")
+                no-repeat rgba(255, 255, 255, 0.3) left 10px center / 14px auto;
+            }
+
+            &.normal {
+              background: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23000'%3E%3Cpath d='M620-520q25 0 42.5-17.5T680-580q0-25-17.5-42.5T620-640q-25 0-42.5 17.5T560-580q0 25 17.5 42.5T620-520Zm-280 0q25 0 42.5-17.5T400-580q0-25-17.5-42.5T340-640q-25 0-42.5 17.5T280-580q0 25 17.5 42.5T340-520Zm50 180h180q13 0 21.5-8.5T600-370q0-13-8.5-21.5T570-400H390q-13 0-21.5 8.5T360-370q0 13 8.5 21.5T390-340Zm90 260q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z'/%3E%3C/svg%3E")
+                no-repeat rgba(255, 255, 255, 0.3) left 10px center / 14px auto;
+            }
+
+            &.bad {
+              background: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23000'%3E%3Cpath d='M120-320q-32 0-56-24t-24-56v-80q0-7 1.5-15t4.5-15l120-282q9-20 30-34t44-14h320q33 0 56.5 23.5T640-760v407q0 16-6.5 30.5T616-297L399-81q-15 14-35.5 17T324-71q-19-10-27.5-28t-3.5-37l45-184H120Zm680-520q33 0 56.5 23.5T880-760v360q0 33-23.5 56.5T800-320q-33 0-56.5-23.5T720-400v-360q0-33 23.5-56.5T800-840Z'/%3E%3C/svg%3E")
+                no-repeat rgba(255, 255, 255, 0.3) left 10px center / 14px auto;
+            }
+          }
+        }
+
+        div.bot-box {
+          position: relative;
+          padding: 10px 50px 20px 70px;
+
+          & > strong {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 0;
+            background: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23e8eaed'%3E%3Cpath d='M200-120q-17 0-28.5-11.5T160-160v-160q0-33 23.5-56.5T240-400h480q33 0 56.5 23.5T800-320v160q0 17-11.5 28.5T760-120H200Zm160-320q-83 0-141.5-58.5T160-640q0-83 58.5-141.5T360-840h240q83 0 141.5 58.5T800-640q0 83-58.5 141.5T600-440H360Zm0-160q17 0 28.5-11.5T400-640q0-17-11.5-28.5T360-680q-17 0-28.5 11.5T320-640q0 17 11.5 28.5T360-600Zm240 0q17 0 28.5-11.5T640-640q0-17-11.5-28.5T600-680q-17 0-28.5 11.5T560-640q0 17 11.5 28.5T600-600Z'/%3E%3C/svg%3E")
+              no-repeat #3366cc center / 30px auto;
+          }
+
+          div.text {
+            position: relative;
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            line-height: 1.4;
+
+            &::before {
+              content: "";
+              display: block;
+              position: absolute;
+              left: -14px;
+              top: 15px;
+              border: 7px solid transparent;
+              border-right-color: #fff;
+            }
+          }
+        }
+
+        div.user-box {
+          position: relative;
+          padding: 10px 70px 20px 50px;
+
+          & > strong {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 10px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 0;
+            background: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23e8eaed'%3E%3Cpath d='M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-240v-32q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v32q0 33-23.5 56.5T720-160H240q-33 0-56.5-23.5T160-240Z'/%3E%3C/svg%3E")
+              no-repeat #555 center / 30px auto;
+          }
+
+          div.text {
+            position: relative;
+            background: #eee6b3;
+            border-radius: 10px;
+            padding: 20px;
+            line-height: 1.4;
+
+            &::before {
+              content: "";
+              display: block;
+              position: absolute;
+              right: -14px;
+              top: 15px;
+              border: 7px solid transparent;
+              border-left-color: #eee6b3;
+            }
+          }
+        }
+      }
+
+      div.chat-form {
+        position: fixed;
+        z-index: 999;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        padding: 15px;
+        background: #fff;
+        font-size: 0;
+        border-radius: 20px;
+
+        div.ex {
+          position: absolute;
+          top: -80px;
+          left: 0;
+          right: 0;
+
+          strong {
+            display: block;
+            font-size: 14px;
+            font-size: 16px;
+            margin: 0 0 10px;
+          }
+
+          p {
+            display: inline-block;
+            margin: 0 10px 0 0;
+            width: calc((100% - 20px) / 3);
+            font-size: 14px;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+            padding: 10px;
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            &:last-of-type {
+              margin: 0;
+            }
+          }
+        }
+
+        textarea {
+          width: calc(100% - 55px);
+          font-size: 16px;
+          height: 55px;
+          border: none;
+          font-weight: 600;
+          outline: none;
+          resize: none;
+
+          &::placeholder {
+            font-weight: 400;
+            color: #777;
+          }
+        }
+
+        button {
+          vertical-align: top;
+          width: 55px;
+          height: 55px;
+          font-size: 16px;
+          border: none;
+          border-left: none;
+          border-radius: 50%;
+          font-size: 0;
+          background: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23000000'%3E%3Cpath d='M440-80v-647L256-544l-56-56 280-280 280 280-56 57-184-184v647h-80Z'/%3E%3C/svg%3E")
+            no-repeat #f0f0f0 center;
+        }
+      }
+    }
+  }
+}
+
+// @media (min-width: default.$screen-size-pc) {
+//     @include mixin.container(default.$screen-size-pc);
+//     padding: 0 40px;
+//   }
