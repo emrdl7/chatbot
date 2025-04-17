@@ -9,6 +9,7 @@
     <meta charset="UTF-8" />
     <title>인포인드 | 생성형 AI 기반 챗봇</title>
     <style>
+@charset "UTF-8";
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -488,12 +489,12 @@ body section.chat-box {
 }
 body section.chat-box .container {
   position: absolute;
+  display: inline-block;
   left: 0;
   right: 0;
   top: 200px;
   bottom: 0;
-  display: inline-block;
-  margin: 0 auto;
+  margin: 0;
   text-align: left;
   vertical-align: top;
   width: 100%;
@@ -511,8 +512,7 @@ body section.chat-box .container {
 }
 @media (min-width: 1200px) {
   body section.chat-box .container {
-    position: absolute;
-    right: 200px;
+    margin-right: 200px;
     top: 0;
   }
 }
@@ -520,6 +520,7 @@ body section.chat-box .container {
   body section.chat-box .container {
     right: auto;
     left: 50%;
+    margin: 0;
     transform: translateX(-200px);
   }
 }
@@ -591,7 +592,6 @@ body section.chat-box .container div.chat-text div.information div.ex p {
   text-align: center;
 }
 body section.chat-box .container div.chat-text div.survey {
-  text-align: right;
   padding: 10px 0 0;
 }
 body section.chat-box .container div.chat-text div.survey strong {
@@ -625,6 +625,9 @@ body section.chat-box .container div.chat-text div.survey button.bad {
   background: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23000'%3E%3Cpath d='M120-320q-32 0-56-24t-24-56v-80q0-7 1.5-15t4.5-15l120-282q9-20 30-34t44-14h320q33 0 56.5 23.5T640-760v407q0 16-6.5 30.5T616-297L399-81q-15 14-35.5 17T324-71q-19-10-27.5-28t-3.5-37l45-184H120Zm680-520q33 0 56.5 23.5T880-760v360q0 33-23.5 56.5T800-320q-33 0-56.5-23.5T720-400v-360q0-33 23.5-56.5T800-840Z'/%3E%3C/svg%3E") no-repeat rgba(255, 255, 255, 0.3) left 10px center/14px auto;
 }
 body section.chat-box .container div.chat-text div.bot-box {
+  display: flex;
+  flex-direction: column; /* 한 줄에 하나씩 배치 (세로 정렬) */
+  align-items: flex-start; /* 오른쪽 정렬 */
   position: relative;
   padding: 10px 50px 20px 70px;
 }
@@ -647,6 +650,8 @@ body section.chat-box .container div.chat-text div.bot-box div.text {
   border-radius: 10px;
   padding: 20px;
   line-height: 1.4;
+  max-width: 90%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 }
 body section.chat-box .container div.chat-text div.bot-box div.text::before {
   content: "";
@@ -661,6 +666,9 @@ body section.chat-box .container div.chat-text div.bot-box div.text p {
   margin: 0;
 }
 body section.chat-box .container div.chat-text div.user-box {
+  display: flex;
+  flex-direction: column; /* 한 줄에 하나씩 배치 (세로 정렬) */
+  align-items: flex-end; /* 오른쪽 정렬 */
   position: relative;
   padding: 10px 70px 20px 50px;
 }
@@ -678,11 +686,14 @@ body section.chat-box .container div.chat-text div.user-box > strong {
   background: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23e8eaed'%3E%3Cpath d='M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-240v-32q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v32q0 33-23.5 56.5T720-160H240q-33 0-56.5-23.5T160-240Z'/%3E%3C/svg%3E") no-repeat #555 center/30px auto;
 }
 body section.chat-box .container div.chat-text div.user-box div.text {
+  display: block;
   position: relative;
   background: #eee6b3;
   border-radius: 10px;
   padding: 20px;
   line-height: 1.4;
+  max-width: 90%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 }
 body section.chat-box .container div.chat-text div.user-box div.text::before {
   content: "";
@@ -802,10 +813,7 @@ body section.chat-box .container div.chat-form button {
           <div class="user-box">
             <strong>유저</strong>
 
-            <div class="text">
-              답변해주시오 답변해주시오 답변해주시오 답변해주시오 답변해주시오
-              답변해주시오 답변해주시오 답변해주시오 답변해주시오 답변해주시오
-            </div>
+            <div class="text">답변해주시오 답변해주시오</div>
           </div>
 
           <div class="user-box">
