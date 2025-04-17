@@ -11,7 +11,7 @@ function build() {
   try {
     const htmlTemplate = fs.readFileSync(INPUT_HTML, "utf8");
     const jsCode = fs.readFileSync(INPUT_JS, "utf8");
-    const scssResult = sass.compile(INPUT_SCSS);
+    const scssResult = sass.compile(INPUT_SCSS, { style: "compressed" });
 
     const finalHTML = htmlTemplate
       .replace("<!-- INJECT:STYLE -->", `<style>\n${scssResult.css}\n</style>`)
