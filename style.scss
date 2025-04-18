@@ -326,11 +326,16 @@ body {
 
             h3.hd3 {
               font-size: 22px;
+              margin: 0 0 30px;
+            }
+
+            h4.hd4 {
+              font-size: 18px;
               margin: 0 0 20px;
             }
 
             ul.list {
-              margin: 10px 0 20px;
+              margin: 20px 0 30px;
               padding: 0 0 0 15px;
 
               li {
@@ -338,8 +343,30 @@ body {
               }
             }
 
+            ul.check-list {
+              margin: 20px 0 20px;
+              padding: 0;
+              list-style: none;
+
+              li {
+                position: relative;
+                margin: 0 0 10px;
+                padding: 0 0 0 24px;
+
+                input[type="checkbox"],
+                input[type="radio"] {
+                  position: absolute;
+                  left: 0;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  width: 16px;
+                  height: 16px;
+                }
+              }
+            }
+
             p.txt {
-              margin: 0 0 10px;
+              margin: 0 0 30px;
             }
           }
         }
