@@ -22,7 +22,6 @@ body {
 body {
   min-height: 100dvh;
   background: #393939;
-  word-break: keep-all;
 
   section.head {
     position: relative;
@@ -56,6 +55,7 @@ body {
       font-size: 22px;
       font-weight: 900;
       text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4);
+      line-height: 1.3;
 
       @media (min-width: default.$screen-size-pc1) {
         font-size: 24px;
@@ -117,7 +117,6 @@ body {
       padding: 0 15px;
       background: #ccc;
       backdrop-filter: blur(10px);
-      word-break: keep-all;
 
       @media (min-width: default.$screen-size-pc1) {
         position: static;
@@ -215,6 +214,7 @@ body {
               padding: 10px;
               color: #fff;
               text-align: center;
+              cursor: pointer;
             }
           }
         }
