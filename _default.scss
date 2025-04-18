@@ -6,6 +6,35 @@ $screen-size-pc2: 1200px;
 $screen-size-pc3: 1400px;
 $screen-size-mobile: max($screen-size-pc1);
 
+:root {
+  --theme-color: #393939;
+  --text-color1: #fff;
+  --text-color2: #222;
+}
+
+body {
+  &.theme1 {
+    --theme-color: #393939;
+    --text-color1: #fff;
+    --text-color2: #222;
+  }
+  &.theme2 {
+    --theme-color: #e4e4e4;
+    --text-color1: #222;
+    --text-color2: #fff;
+  }
+  &.theme3 {
+    --theme-color: #126eaf;
+    --text-color1: #fff;
+    --text-color2: #222;
+  }
+  &.theme4 {
+    --theme-color: #72af12;
+    --text-color1: #fff;
+    --text-color2: #222;
+  }
+}
+
 *,
 *::before,
 *::after {

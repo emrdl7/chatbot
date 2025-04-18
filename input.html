@@ -10,8 +10,15 @@
     <title>인포인드 | 생성형 AI 기반 챗봇</title>
     <!-- INJECT:STYLE -->
   </head>
-  <body>
+  <body class="theme1">
     <section class="head">
+      <select id="themeSelector">
+        <option value="theme1">테마 1</option>
+        <option value="theme2">테마 2</option>
+        <option value="theme3">테마 3</option>
+        <option value="theme4">테마 4</option>
+      </select>
+
       <h1>
         <span>생성형 AI 기반</span>
         <span>챗봇 POC 서비스</span>
@@ -105,7 +112,22 @@
               </ul>
 
               <p class="txt">해당 질문에 대한 답변은 어흥</p>
+            </div>
 
+            <div class="survey">
+              <strong>답변평가</strong>
+
+              <button class="good">만족</button>
+              <button class="normal">보통</button>
+              <button class="bad">불만족</button>
+            </div>
+          </div>
+
+          <div class="bot-box">
+            <strong>챗봇</strong>
+
+            <div class="text-data">
+              <h3 class="hd3">답변에 대해 만족한다고 하셨습니다!</h3>
               <h4 class="hd4">어떤점이 만족스러웠나요?</h4>
               <ul class="check-list">
                 <li>
