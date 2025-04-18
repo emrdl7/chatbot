@@ -1,12 +1,34 @@
 const selector = document.getElementById("themeSelector");
+const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
-selector.addEventListener("change", (e) => {
-  const selectedTheme = e.target.value;
+let userPreference = localStorage.getItem("themePreference") || "system";
+selector.value = userPreference;
+
+function applyTheme() {
   const body = document.body;
+  body.className = ""; // 모든 클래스 제거
 
-  // 기존 테마 클래스 제거
-  body.classList.remove("theme1", "theme2", "theme3", "theme4");
+  if (userPreference === "system") {
+    const isDark = mediaQuery.matches;
+    body.classList.add(isDark ? "theme1" : "theme2");
+  } else {
+    body.classList.add(userPreference); // theme1 ~ theme4
+  }
+}
 
-  // 새 테마 클래스 추가
-  body.classList.add(selectedTheme);
+// 시스템 테마 변경될 때만 반응 (자동 모드일 때만)
+mediaQuery.addEventListener("change", () => {
+  if (userPreference === "system") {
+    applyTheme();
+  }
 });
+
+// 사용자 수동 변경
+selector.addEventListener("change", (e) => {
+  userPreference = e.target.value;
+  localStorage.setItem("themePreference", userPreference);
+  applyTheme();
+});
+
+// 초기 실행
+applyTheme();
