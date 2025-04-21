@@ -203,7 +203,7 @@ body {
           }
 
           div.text {
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.1);
             padding: 20px 20px 10px;
             border-radius: 20px;
             font-size: 16px;
@@ -232,11 +232,10 @@ body {
             p {
               margin: 0 5px;
               font-size: 14px;
-              background: rgba(0, 0, 0, 0.2);
+              background: rgba(0, 0, 0, 0.1);
               border-radius: 10px;
               padding: 10px;
               color: var(--text-color1);
-              text-align: center;
               cursor: pointer;
             }
           }
@@ -432,7 +431,7 @@ body {
           div.text {
             display: block;
             position: relative;
-            background: #eee6b3;
+            background: #f5edb9;
             border-radius: 10px;
             padding: 20px;
             line-height: 1.4;
@@ -446,13 +445,13 @@ body {
               right: 17px;
               top: -13px;
               border: 7px solid transparent;
-              border-bottom-color: #eee6b3;
+              border-bottom-color: #f5edb9;
 
               @media (min-width: default.$screen-size-pc1) {
                 right: -13px;
                 top: 15px;
                 border-bottom-color: transparent;
-                border-left-color: #eee6b3;
+                border-left-color: #f5edb9;
               }
             }
 

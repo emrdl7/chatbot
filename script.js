@@ -45,3 +45,14 @@ document.addEventListener(
   },
   false
 );
+
+document.querySelectorAll(".ex p").forEach((p) => {
+  p.addEventListener("click", () => {
+    const textarea = document.querySelector(".chat-form textarea");
+    if (textarea) {
+      const cleanText = p.textContent.replace(/\s+/g, " ").trim();
+      textarea.value = cleanText;
+      textarea.focus();
+    }
+  });
+});
