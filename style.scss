@@ -284,6 +284,29 @@ body {
           }
         }
 
+        div.button-box {
+          margin: 20px 0 30px;
+
+          button {
+            position: relative;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            background: color-mix(in srgb, var(--theme-color), black 30%);
+            color: var(--text-color1);
+
+            &.submit {
+              background: rgba(0, 0, 0, 0.8);
+              color: #fff;
+            }
+
+            &.sub {
+              background: rgba(0, 0, 0, 0.3);
+              color: #fff;
+            }
+          }
+        }
+
         div.bot-box {
           display: flex;
           flex-direction: column; /* 한 줄에 하나씩 배치 (세로 정렬) */
