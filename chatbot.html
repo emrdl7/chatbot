@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>인포인드 | 생성형 AI 기반 챗봇</title>
-    <style>
-/*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:rgba(0,0,0,0)}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}:root{--theme-color: #393939;--text-color1: #fff;--text-color2: #222}body.theme1{--theme-color: #393939;--text-color1: #fff;--text-color2: #222}body.theme2{--theme-color: #fefefe;--text-color1: #222;--text-color2: #fff}body.theme3{--theme-color: #126eaf;--text-color1: #fff;--text-color2: #222}body.theme4{--theme-color: #72af12;--text-color1: #fff;--text-color2: #222}*,*::before,*::after{box-sizing:border-box}html{min-width:360px;max-width:100%;font-size:14px;height:100dvh}html,body{font-family:sans-serif}body{min-height:100dvh;background:var(--theme-color)}body section.head{position:relative;z-index:10;padding:60px 15px 20px;color:var(--text-color1);height:180px}@media(min-width: 900px){body section.head{position:absolute;left:0;top:0;width:calc(100% - 700px);height:auto;text-align:right;padding:40px 30px}}@media(min-width: 1200px){body section.head{position:absolute;left:0;top:0;width:calc(100% - 900px)}}@media(min-width: 1400px){body section.head{width:calc(50% - 200px)}}body section.head #themeSelector{position:absolute;left:0;right:0;top:0;height:40px;color:var(--text-color1);border:none;padding:0 20px;outline:none;appearance:none;-webkit-appearance:none;-moz-appearance:none;border-radius:0;background:url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%2300000050'%3E%3Cpath d='M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z'/%3E%3C/svg%3E") no-repeat rgba(0,0,0,.2) right 20px center/20px auto}body section.head h1{font-size:22px;font-weight:900;line-height:1.3;color:var(--text-color1)}@media(min-width: 900px){body section.head h1{font-size:24px}body section.head h1 span{display:block}}@media(min-width: 1200px){body section.head h1{font-size:32px}}@media(min-width: 1400px){body section.head h1{font-size:44px}}body section.head p.description{color:var(--text-color1);opacity:.6;line-height:1.4;margin:0 0 20px}body section.head p.description span{display:block}body section.head button.new-chat{position:absolute;right:10px;bottom:0;transform:translateY(50%);background:rgba(0,0,0,.6);border:none;padding:10px 20px;border-radius:20px;color:#fff}@media(min-width: 900px){body section.head button.new-chat{position:static}}body section.chat-box{text-align:right}body section.chat-box .container{position:absolute;display:inline-block;left:0;right:0;top:180px;bottom:0;margin:0;text-align:left;vertical-align:top;width:100%;padding:0 15px;background:rgba(0,0,0,.1)}@media(min-width: 900px){body section.chat-box .container{position:static;width:700px;min-height:100dvh}}@media(min-width: 1200px){body section.chat-box .container{margin-right:200px;top:0}}@media(min-width: 1400px){body section.chat-box .container{position:absolute;right:auto;left:50%;margin:0;transform:translateX(-200px)}}body section.chat-box .container::before{content:"";display:block;position:absolute;z-index:1;left:0;right:0;bottom:0;height:160px;background:linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%)}body section.chat-box .container div.chat-text{position:absolute;left:0;right:0;top:0;bottom:0;overflow-y:auto;padding:20px 15px 200px}@media(min-width: 900px){body section.chat-box .container div.chat-text{padding:40px 30px 200px}}body section.chat-box .container div.chat-text div.information{margin:0 0 30px}body section.chat-box .container div.chat-text div.information h2{color:var(--text-color1)}body section.chat-box .container div.chat-text div.information h2 small{display:block;font-size:16px;margin:0 0 4px}body section.chat-box .container div.chat-text div.information h2 span{font-size:22px}body section.chat-box .container div.chat-text div.information div.text{background:rgba(0,0,0,.1);padding:20px 20px 10px;border-radius:20px;font-size:16px;color:var(--text-color1)}body section.chat-box .container div.chat-text div.information div.text p{margin:0 0 10px}body section.chat-box .container div.chat-text div.information div.ex{position:relative;display:flex;font-size:0;margin:20px 0 40px;padding:30px 0 0}body section.chat-box .container div.chat-text div.information div.ex strong{display:block;position:absolute;top:0;font-size:16px;color:var(--text-color1)}body section.chat-box .container div.chat-text div.information div.ex p{margin:0 5px;font-size:14px;background:rgba(0,0,0,.1);border-radius:10px;padding:10px;color:var(--text-color1);cursor:pointer}body section.chat-box .container div.chat-text div.survey{padding:10px 0 0}body section.chat-box .container div.chat-text div.survey strong{display:inline-block;vertical-align:top;font-size:14px;line-height:30px;padding:0 10px;color:var(--text-color1);font-weight:500}body section.chat-box .container div.chat-text div.survey button{border:none;width:34px;height:30px;border-radius:6px;font-size:0}@media(min-width: 900px){body section.chat-box .container div.chat-text div.survey button{width:auto;font-size:14px;padding:0 10px 0 30px}}body section.chat-box .container div.chat-text div.survey button.good{background:url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23000'%3E%3Cpath d='M840-640q32 0 56 24t24 56v80q0 7-1.5 15t-4.5 15L794-168q-9 20-30 34t-44 14H400q-33 0-56.5-23.5T320-200v-407q0-16 6.5-30.5T344-663l217-216q15-14 35.5-17t39.5 7q19 10 27.5 28t3.5 37l-45 184h218ZM160-120q-33 0-56.5-23.5T80-200v-360q0-33 23.5-56.5T160-640q33 0 56.5 23.5T240-560v360q0 33-23.5 56.5T160-120Z'/%3E%3C/svg%3E") no-repeat hsla(0,0%,100%,.6) left 10px center/14px auto}body section.chat-box .container div.chat-text div.survey button.normal{background:url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23000'%3E%3Cpath d='M620-520q25 0 42.5-17.5T680-580q0-25-17.5-42.5T620-640q-25 0-42.5 17.5T560-580q0 25 17.5 42.5T620-520Zm-280 0q25 0 42.5-17.5T400-580q0-25-17.5-42.5T340-640q-25 0-42.5 17.5T280-580q0 25 17.5 42.5T340-520Zm50 180h180q13 0 21.5-8.5T600-370q0-13-8.5-21.5T570-400H390q-13 0-21.5 8.5T360-370q0 13 8.5 21.5T390-340Zm90 260q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z'/%3E%3C/svg%3E") no-repeat hsla(0,0%,100%,.6) left 10px center/14px auto}body section.chat-box .container div.chat-text div.survey button.bad{background:url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23000'%3E%3Cpath d='M120-320q-32 0-56-24t-24-56v-80q0-7 1.5-15t4.5-15l120-282q9-20 30-34t44-14h320q33 0 56.5 23.5T640-760v407q0 16-6.5 30.5T616-297L399-81q-15 14-35.5 17T324-71q-19-10-27.5-28t-3.5-37l45-184H120Zm680-520q33 0 56.5 23.5T880-760v360q0 33-23.5 56.5T800-320q-33 0-56.5-23.5T720-400v-360q0-33 23.5-56.5T800-840Z'/%3E%3C/svg%3E") no-repeat hsla(0,0%,100%,.6) left 10px center/14px auto}body section.chat-box .container div.chat-text div.button-box{margin:20px 0 30px}body section.chat-box .container div.chat-text div.button-box button{position:relative;padding:10px 20px;border:none;border-radius:6px;background:color-mix(in srgb, var(--theme-color), black 30%);color:var(--text-color1)}body section.chat-box .container div.chat-text div.button-box button.submit{background:rgba(0,0,0,.8);color:#fff}body section.chat-box .container div.chat-text div.button-box button.sub{background:rgba(0,0,0,.3);color:#fff}body section.chat-box .container div.chat-text div.bot-box{display:flex;flex-direction:column;align-items:flex-start;position:relative;padding:10px 50px 20px 0}@media(min-width: 900px){body section.chat-box .container div.chat-text div.bot-box{padding:10px 50px 40px 70px}}body section.chat-box .container div.chat-text div.bot-box>strong{display:block;width:50px;height:50px;line-height:50px;border-radius:50%;text-align:center;font-size:0;background:url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23e8eaed'%3E%3Cpath d='M200-120q-17 0-28.5-11.5T160-160v-160q0-33 23.5-56.5T240-400h480q33 0 56.5 23.5T800-320v160q0 17-11.5 28.5T760-120H200Zm160-320q-83 0-141.5-58.5T160-640q0-83 58.5-141.5T360-840h240q83 0 141.5 58.5T800-640q0 83-58.5 141.5T600-440H360Zm0-160q17 0 28.5-11.5T400-640q0-17-11.5-28.5T360-680q-17 0-28.5 11.5T320-640q0 17 11.5 28.5T360-600Zm240 0q17 0 28.5-11.5T640-640q0-17-11.5-28.5T600-680q-17 0-28.5 11.5T560-640q0 17 11.5 28.5T600-600Z'/%3E%3C/svg%3E") no-repeat #36c center/30px auto;margin:0 0 20px;box-shadow:0 2px 0 rgba(0,0,0,.4)}@media(min-width: 900px){body section.chat-box .container div.chat-text div.bot-box>strong{position:absolute;left:0;top:10px}}body section.chat-box .container div.chat-text div.bot-box div.text{position:relative;background:#fff;border-radius:10px;padding:20px;line-height:1.4;max-width:90%;box-shadow:0 1px 1px rgba(0,0,0,.25)}body section.chat-box .container div.chat-text div.bot-box div.text::before{content:"";display:block;position:absolute;left:17px;top:-13px;border:7px solid rgba(0,0,0,0);border-bottom-color:#fff}@media(min-width: 900px){body section.chat-box .container div.chat-text div.bot-box div.text::before{left:-13px;top:15px;border-right-color:#fff;border-bottom-color:rgba(0,0,0,0)}}body section.chat-box .container div.chat-text div.bot-box div.text p{margin:0}body section.chat-box .container div.chat-text div.bot-box div.text-data{position:relative;color:var(--text-color1)}body section.chat-box .container div.chat-text div.bot-box div.text-data h3.hd3{font-size:22px;margin:0 0 30px}body section.chat-box .container div.chat-text div.bot-box div.text-data h4.hd4{font-size:18px;margin:0 0 20px}body section.chat-box .container div.chat-text div.bot-box div.text-data ul.list{margin:20px 0 30px;padding:0 0 0 15px}body section.chat-box .container div.chat-text div.bot-box div.text-data ul.list li{margin:0 0 5px}body section.chat-box .container div.chat-text div.bot-box div.text-data ul.check-list{margin:20px 0 20px;padding:0;list-style:none}body section.chat-box .container div.chat-text div.bot-box div.text-data ul.check-list li{position:relative;margin:0 0 10px;padding:0 0 0 24px}body section.chat-box .container div.chat-text div.bot-box div.text-data ul.check-list li input[type=checkbox],body section.chat-box .container div.chat-text div.bot-box div.text-data ul.check-list li input[type=radio]{position:absolute;left:0;top:50%;transform:translateY(-50%);width:16px;height:16px}body section.chat-box .container div.chat-text div.bot-box div.text-data p.txt{margin:0 0 30px}body section.chat-box .container div.chat-text div.user-box{display:flex;flex-direction:column;align-items:flex-end;position:relative;padding:10px 0 20px 50px}@media(min-width: 900px){body section.chat-box .container div.chat-text div.user-box{padding:10px 70px 40px 50px}}body section.chat-box .container div.chat-text div.user-box>strong{display:block;width:50px;height:50px;line-height:50px;border-radius:50%;text-align:center;font-size:0;background:url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23e8eaed'%3E%3Cpath d='M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-240v-32q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v32q0 33-23.5 56.5T720-160H240q-33 0-56.5-23.5T160-240Z'/%3E%3C/svg%3E") no-repeat #555 center/30px auto;margin:0 0 20px;box-shadow:0 2px 0 rgba(0,0,0,.4)}@media(min-width: 900px){body section.chat-box .container div.chat-text div.user-box>strong{position:absolute;right:0;top:10px}}body section.chat-box .container div.chat-text div.user-box div.text{display:block;position:relative;background:#f5edb9;border-radius:10px;padding:20px;line-height:1.4;max-width:90%;box-shadow:0 1px 1px rgba(0,0,0,.25)}body section.chat-box .container div.chat-text div.user-box div.text::before{content:"";display:block;position:absolute;right:17px;top:-13px;border:7px solid rgba(0,0,0,0);border-bottom-color:#f5edb9}@media(min-width: 900px){body section.chat-box .container div.chat-text div.user-box div.text::before{right:-13px;top:15px;border-bottom-color:rgba(0,0,0,0);border-left-color:#f5edb9}}body section.chat-box .container div.chat-text div.user-box div.text p{margin:0}body section.chat-box .container div.chat-form{position:fixed;z-index:999;left:20px;right:20px;bottom:20px;padding:15px;background:#fff;font-size:0;border-radius:20px}body section.chat-box .container div.chat-form textarea{width:calc(100% - 55px);font-size:16px;height:55px;border:none;font-weight:600;outline:none;resize:none}body section.chat-box .container div.chat-form textarea::placeholder{font-weight:400;color:#777}body section.chat-box .container div.chat-form button{vertical-align:top;width:55px;height:55px;font-size:16px;border:none;border-left:none;border-radius:50%;font-size:0;background:url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23000000'%3E%3Cpath d='M440-80v-647L256-544l-56-56 280-280 280 280-56 57-184-184v647h-80Z'/%3E%3C/svg%3E") no-repeat #f0f0f0 center}
-</style>
+
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body class="theme1">
     <section class="head">
@@ -190,66 +187,7 @@
     </section>
 
     <!-- <p class="copyright">© Infomind.</p> -->
-    <script>
-const selector = document.getElementById("themeSelector");
-const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
-let userPreference = localStorage.getItem("themePreference") || "system";
-selector.value = userPreference;
-
-function applyTheme() {
-  const body = document.body;
-  body.className = ""; // 모든 클래스 제거
-
-  if (userPreference === "system") {
-    const isDark = mediaQuery.matches;
-    body.classList.add(isDark ? "theme1" : "theme2");
-  } else {
-    body.classList.add(userPreference); // theme1 ~ theme4
-  }
-}
-
-// 시스템 테마 변경될 때만 반응 (자동 모드일 때만)
-mediaQuery.addEventListener("change", () => {
-  if (userPreference === "system") {
-    applyTheme();
-  }
-});
-
-// 사용자 수동 변경
-selector.addEventListener("change", (e) => {
-  userPreference = e.target.value;
-  localStorage.setItem("themePreference", userPreference);
-  applyTheme();
-});
-
-// 초기 실행
-applyTheme();
-
-let lastTouchEnd = 0;
-document.addEventListener(
-  "touchend",
-  function (e) {
-    const now = Date.now();
-    if (now - lastTouchEnd <= 300) {
-      e.preventDefault(); // 더블탭 확대 방지
-    }
-    lastTouchEnd = now;
-  },
-  false
-);
-
-document.querySelectorAll(".ex p").forEach((p) => {
-  p.addEventListener("click", () => {
-    const textarea = document.querySelector(".chat-form textarea");
-    if (textarea) {
-      const cleanText = p.textContent.replace(/\s+/g, " ").trim();
-      textarea.value = cleanText;
-      textarea.focus();
-    }
-  });
-});
-
-</script>
+    <script src="script.js"></script>
   </body>
 </html>
