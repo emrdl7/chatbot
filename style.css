@@ -548,7 +548,6 @@ body section.chat-box .container {
 }
 @media (min-width: 900px) {
   body section.chat-box .container {
-    position: relative;
     left: auto;
     right: 0;
     top: 0;
@@ -564,12 +563,23 @@ body section.chat-box .container {
 }
 @media (min-width: 1400px) {
   body section.chat-box .container {
-    position: absolute;
     right: auto;
     left: 50%;
     margin: 0;
     transform: translateX(-200px);
   }
+}
+body section.chat-box .container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 150px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(var(--theme-color-rgb-darker), 0) 0%, rgba(var(--theme-color-rgb-darker), 1) 40%);
 }
 @media (min-width: 900px) {
   body section.chat-box .container::after {
@@ -920,6 +930,26 @@ body section.chat-box .container div.chat-form {
   background: #fff;
   font-size: 0;
   border-radius: 20px;
+}
+@media (min-width: 900px) {
+  body section.chat-box .container div.chat-form {
+    left: auto;
+    right: 20px;
+    width: 660px;
+  }
+}
+@media (min-width: 1200px) {
+  body section.chat-box .container div.chat-form {
+    margin-right: 200px;
+  }
+}
+@media (min-width: 1400px) {
+  body section.chat-box .container div.chat-form {
+    right: auto;
+    left: 50%;
+    margin: 0;
+    transform: translateX(-330px);
+  }
 }
 body section.chat-box .container div.chat-form textarea {
   width: calc(100% - 55px);
