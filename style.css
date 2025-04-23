@@ -682,6 +682,7 @@ body section.chat-box .container div.chat-text div.ex div.box p {
   padding: 10px;
   color: var(--text-color1);
   font-size: 14px;
+  min-height: 54px;
   cursor: pointer;
   box-sizing: border-box;
   margin: 0;
