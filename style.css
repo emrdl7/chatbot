@@ -889,7 +889,7 @@ body section.chat-box .container div.chat-text div.bot-box div.text-data div.tab
 body section.chat-box .container div.chat-text div.bot-box div.text-data div.table-type1 table {
   width: 100%;
   min-width: 550px;
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(0, 0, 0, 0.4);
 }
 body section.chat-box .container div.chat-text div.bot-box div.text-data div.table-type1 table thead tr th {
   border-right: 1px solid rgba(0, 0, 0, 0.4);
