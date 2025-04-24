@@ -676,7 +676,7 @@ body section.chat-box .container div.chat-text div.ex div.box {
   flex-wrap: wrap;
   gap: 10px;
   overflow: hidden;
-  max-height: 54px;
+  max-height: 56px;
   transition: max-height 0.3s ease;
 }
 body section.chat-box .container div.chat-text div.ex div.box.expanded {
@@ -770,6 +770,14 @@ body section.chat-box .container div.chat-text div.bot-box {
     padding: 10px 50px 40px 70px;
   }
 }
+body section.chat-box .container div.chat-text div.bot-box:has(div.text-data) {
+  padding: 10px 0 20px 0;
+}
+@media (min-width: 900px) {
+  body section.chat-box .container div.chat-text div.bot-box:has(div.text-data) {
+    padding: 10px 20px 40px 70px;
+  }
+}
 body section.chat-box .container div.chat-text div.bot-box > strong {
   display: block;
   width: 50px;
@@ -821,6 +829,7 @@ body section.chat-box .container div.chat-text div.bot-box div.text p {
 body section.chat-box .container div.chat-text div.bot-box div.text-data {
   position: relative;
   color: var(--text-color1);
+  width: 100%;
 }
 body section.chat-box .container div.chat-text div.bot-box div.text-data h3.hd3 {
   font-size: 22px;
@@ -856,8 +865,60 @@ body section.chat-box .container div.chat-text div.bot-box div.text-data ul.chec
   width: 16px;
   height: 16px;
 }
+body section.chat-box .container div.chat-text div.bot-box div.text-data div.image {
+  margin: 20px 0 30px;
+}
+body section.chat-box .container div.chat-text div.bot-box div.text-data div.image div.image-box {
+  position: relative;
+  width: 220px;
+  height: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  font-size: 0;
+  margin: 0 0 10px;
+}
+body section.chat-box .container div.chat-text div.bot-box div.text-data div.image div.image-box img {
+  width: 100%;
+  height: auto;
+}
+body section.chat-box .container div.chat-text div.bot-box div.text-data div.table-type1 {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0 30px;
+}
+body section.chat-box .container div.chat-text div.bot-box div.text-data div.table-type1 table {
+  width: 100%;
+  min-width: 550px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+body section.chat-box .container div.chat-text div.bot-box div.text-data div.table-type1 table thead tr th {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.1);
+}
+body section.chat-box .container div.chat-text div.bot-box div.text-data div.table-type1 table tbody tr th {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  padding: 10px 5px;
+  background: rgba(0, 0, 0, 0.1);
+}
+body section.chat-box .container div.chat-text div.bot-box div.text-data div.table-type1 table tbody tr td {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  padding: 10px 5px;
+}
 body section.chat-box .container div.chat-text div.bot-box div.text-data p.txt {
   margin: 0 0 30px;
+}
+body section.chat-box .container div.chat-text div.bot-box div.text-data p.txt span {
+  display: block;
+}
+body section.chat-box .container div.chat-text div.bot-box div.text-data p.txt span + span {
+  margin: 5px 0 0;
 }
 body section.chat-box .container div.chat-text div.user-box {
   display: flex;

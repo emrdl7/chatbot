@@ -282,7 +282,7 @@ body {
             flex-wrap: wrap;
             gap: 10px;
             overflow: hidden;
-            max-height: 54px; // 🔹 한 줄 높이만 보이도록 제한
+            max-height: 56px; // 🔹 한 줄 높이만 보이도록 제한
             transition: max-height 0.3s ease;
 
             &.expanded {
@@ -392,6 +392,14 @@ body {
             padding: 10px 50px 40px 70px;
           }
 
+          &:has(div.text-data) {
+            padding: 10px 0 20px 0;
+
+            @media (min-width: default.$screen-size-pc1) {
+              padding: 10px 20px 40px 70px;
+            }
+          }
+
           & > strong {
             display: block;
             width: 50px;
@@ -446,6 +454,7 @@ body {
           div.text-data {
             position: relative;
             color: var(--text-color1);
+            width: 100%;
 
             h3.hd3 {
               font-size: 22px;
@@ -488,8 +497,88 @@ body {
               }
             }
 
+            div.image {
+              margin: 20px 0 30px;
+              div.image-box {
+                position: relative;
+                width: 220px;
+                height: auto;
+                overflow: hidden;
+                border-radius: 10px;
+                font-size: 0;
+                margin: 0 0 10px;
+
+                // &::before {
+                //   content: "";
+                //   display: block;
+                //   position: absolute;
+                //   right: 10px;
+                //   top: 10px;
+                //   width: 30px;
+                //   height: 30px;
+                //   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23e8eaed'%3E%3Cpath d='M120-120v-200h80v120h120v80H120Zm520 0v-80h120v-120h80v200H640ZM120-640v-200h200v80H200v120h-80Zm640 0v-120H640v-80h200v200h-80Z'/%3E%3C/svg%3E")
+                //     no-repeat rgba(0, 0, 0, 0.4) center/ 90% auto;
+                // }
+
+                img {
+                  width: 100%;
+                  height: auto;
+                }
+              }
+            }
+
+            div.table-type1 {
+              width: 100%;
+              overflow-x: auto;
+              margin: 20px 0 30px;
+
+              table {
+                width: 100%;
+                min-width: 550px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+
+                thead {
+                  tr {
+                    th {
+                      border-right: 1px solid rgba(255, 255, 255, 0.2);
+                      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                      text-align: center;
+                      padding: 5px;
+                      background: rgba(0, 0, 0, 0.1);
+                    }
+                  }
+                }
+
+                tbody {
+                  tr {
+                    th {
+                      border-right: 1px solid rgba(255, 255, 255, 0.2);
+                      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                      text-align: center;
+                      padding: 10px 5px;
+                      background: rgba(0, 0, 0, 0.1);
+                    }
+                    td {
+                      border-right: 1px solid rgba(255, 255, 255, 0.2);
+                      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                      text-align: center;
+                      padding: 10px 5px;
+                    }
+                  }
+                }
+              }
+            }
+
             p.txt {
               margin: 0 0 30px;
+
+              span {
+                display: block;
+              }
+
+              span + span {
+                margin: 5px 0 0;
+              }
             }
           }
         }
