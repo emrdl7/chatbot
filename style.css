@@ -889,25 +889,25 @@ body section.chat-box .container div.chat-text div.bot-box div.text-data div.tab
 body section.chat-box .container div.chat-text div.bot-box div.text-data div.table-type1 table {
   width: 100%;
   min-width: 550px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.4);
 }
 body section.chat-box .container div.chat-text div.bot-box div.text-data div.table-type1 table thead tr th {
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   text-align: center;
   padding: 5px;
   background: rgba(0, 0, 0, 0.1);
 }
 body section.chat-box .container div.chat-text div.bot-box div.text-data div.table-type1 table tbody tr th {
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   text-align: center;
   padding: 10px 5px;
   background: rgba(0, 0, 0, 0.1);
 }
 body section.chat-box .container div.chat-text div.bot-box div.text-data div.table-type1 table tbody tr td {
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   text-align: center;
   padding: 10px 5px;
 }
