@@ -544,8 +544,9 @@ body {
               margin: 20px 0 30px;
               div.image-box {
                 position: relative;
-                width: 220px;
+                width: 490px;
                 height: auto;
+                max-width: 100%;
                 overflow: hidden;
                 border-radius: 10px;
                 font-size: 0;
