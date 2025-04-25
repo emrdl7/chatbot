@@ -460,13 +460,14 @@ body section.error404 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: #fff;
+  color: var(--text-color1);
 }
 body section.error404 h1 {
   display: block;
   font-size: 32px;
   margin: 0 0 30px;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid transparent;
+  border-color: var(--text-color1);
 }
 body section.error404 h1 span {
   display: block;
