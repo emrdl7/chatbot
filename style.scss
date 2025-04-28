@@ -359,7 +359,7 @@ body {
         }
 
         div.survey {
-          padding: 10px 0 0;
+          padding: 10px 0 40px;
 
           strong {
             display: inline-block;
@@ -434,15 +434,6 @@ body {
           @media (min-width: default.$screen-size-pc1) {
             padding: 40px 50px 10px 70px;
           }
-
-          &:has(div.text-data) {
-            padding: 20px 0 10px 0;
-
-            @media (min-width: default.$screen-size-pc1) {
-              padding: 40px 20px 10px 70px;
-            }
-          }
-
           & > strong {
             display: block;
             width: 50px;
@@ -629,6 +620,18 @@ body {
               span + span {
                 margin: 5px 0 0;
               }
+            }
+          }
+
+          &:has(div.text-data) {
+            padding: 20px 0 10px 0;
+
+            @media (min-width: default.$screen-size-pc1) {
+              padding: 40px 20px 10px 20px;
+            }
+
+            & > strong {
+              display: none;
             }
           }
         }

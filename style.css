@@ -742,7 +742,7 @@ body section.chat-box .container div.chat-text div.ex div.box p span {
   text-overflow: ellipsis;
 }
 body section.chat-box .container div.chat-text div.survey {
-  padding: 10px 0 0;
+  padding: 10px 0 40px;
 }
 body section.chat-box .container div.chat-text div.survey strong {
   display: inline-block;
@@ -805,14 +805,6 @@ body section.chat-box .container div.chat-text div.bot-box {
 @media (min-width: 900px) {
   body section.chat-box .container div.chat-text div.bot-box {
     padding: 40px 50px 10px 70px;
-  }
-}
-body section.chat-box .container div.chat-text div.bot-box:has(div.text-data) {
-  padding: 20px 0 10px 0;
-}
-@media (min-width: 900px) {
-  body section.chat-box .container div.chat-text div.bot-box:has(div.text-data) {
-    padding: 40px 20px 10px 70px;
   }
 }
 body section.chat-box .container div.chat-text div.bot-box > strong {
@@ -961,6 +953,17 @@ body section.chat-box .container div.chat-text div.bot-box div.text-data p.txt s
 }
 body section.chat-box .container div.chat-text div.bot-box div.text-data p.txt span + span {
   margin: 5px 0 0;
+}
+body section.chat-box .container div.chat-text div.bot-box:has(div.text-data) {
+  padding: 20px 0 10px 0;
+}
+@media (min-width: 900px) {
+  body section.chat-box .container div.chat-text div.bot-box:has(div.text-data) {
+    padding: 40px 20px 10px 20px;
+  }
+}
+body section.chat-box .container div.chat-text div.bot-box:has(div.text-data) > strong {
+  display: none;
 }
 body section.chat-box .container div.chat-text div.bot-box + div.bot-box {
   padding-top: 0;
