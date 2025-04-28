@@ -808,11 +808,11 @@ body section.chat-box .container div.chat-text div.bot-box {
   }
 }
 body section.chat-box .container div.chat-text div.bot-box:has(div.text-data) {
-  padding: 10px 0 20px 0;
+  padding: 20px 0 10px 0;
 }
 @media (min-width: 900px) {
   body section.chat-box .container div.chat-text div.bot-box:has(div.text-data) {
-    padding: 10px 20px 40px 70px;
+    padding: 40px 20px 10px 70px;
   }
 }
 body section.chat-box .container div.chat-text div.bot-box > strong {

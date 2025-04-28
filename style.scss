@@ -436,10 +436,10 @@ body {
           }
 
           &:has(div.text-data) {
-            padding: 10px 0 20px 0;
+            padding: 20px 0 10px 0;
 
             @media (min-width: default.$screen-size-pc1) {
-              padding: 10px 20px 40px 70px;
+              padding: 40px 20px 10px 70px;
             }
           }
 
