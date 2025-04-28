@@ -683,7 +683,7 @@ body section.chat-box .container div.chat-text div.information div.text p {
 body section.chat-box .container div.chat-text div.ex {
   position: relative;
   font-size: 0;
-  margin: 20px 0 40px;
+  margin: 20px 0;
   padding: 30px 0 0;
 }
 body section.chat-box .container div.chat-text div.ex strong {
@@ -800,11 +800,11 @@ body section.chat-box .container div.chat-text div.bot-box {
   flex-direction: column; /* 한 줄에 하나씩 배치 (세로 정렬) */
   align-items: flex-start; /* 오른쪽 정렬 */
   position: relative;
-  padding: 10px 50px 20px 0;
+  padding: 20px 50px 10px 0;
 }
 @media (min-width: 900px) {
   body section.chat-box .container div.chat-text div.bot-box {
-    padding: 10px 50px 40px 70px;
+    padding: 40px 50px 10px 70px;
   }
 }
 body section.chat-box .container div.chat-text div.bot-box:has(div.text-data) {
@@ -831,7 +831,7 @@ body section.chat-box .container div.chat-text div.bot-box > strong {
   body section.chat-box .container div.chat-text div.bot-box > strong {
     position: absolute;
     left: 0;
-    top: 10px;
+    top: 40px;
   }
 }
 body section.chat-box .container div.chat-text div.bot-box div.text {
@@ -962,16 +962,25 @@ body section.chat-box .container div.chat-text div.bot-box div.text-data p.txt s
 body section.chat-box .container div.chat-text div.bot-box div.text-data p.txt span + span {
   margin: 5px 0 0;
 }
+body section.chat-box .container div.chat-text div.bot-box + div.bot-box {
+  padding-top: 0;
+}
+body section.chat-box .container div.chat-text div.bot-box + div.bot-box div.text::before {
+  display: none;
+}
+body section.chat-box .container div.chat-text div.bot-box + div.bot-box > strong {
+  display: none;
+}
 body section.chat-box .container div.chat-text div.user-box {
   display: flex;
   flex-direction: column; /* 한 줄에 하나씩 배치 (세로 정렬) */
   align-items: flex-end; /* 오른쪽 정렬 */
   position: relative;
-  padding: 10px 0 20px 50px;
+  padding: 20px 0 10px 50px;
 }
 @media (min-width: 900px) {
   body section.chat-box .container div.chat-text div.user-box {
-    padding: 10px 70px 40px 50px;
+    padding: 40px 70px 10px 50px;
   }
 }
 body section.chat-box .container div.chat-text div.user-box > strong {
@@ -990,7 +999,7 @@ body section.chat-box .container div.chat-text div.user-box > strong {
   body section.chat-box .container div.chat-text div.user-box > strong {
     position: absolute;
     right: 0;
-    top: 10px;
+    top: 40px;
   }
 }
 body section.chat-box .container div.chat-text div.user-box div.text {
@@ -1022,6 +1031,15 @@ body section.chat-box .container div.chat-text div.user-box div.text::before {
 }
 body section.chat-box .container div.chat-text div.user-box div.text p {
   margin: 0;
+}
+body section.chat-box .container div.chat-text div.user-box + div.user-box {
+  padding-top: 0;
+}
+body section.chat-box .container div.chat-text div.user-box + div.user-box div.text::before {
+  display: none;
+}
+body section.chat-box .container div.chat-text div.user-box + div.user-box > strong {
+  display: none;
 }
 body section.chat-box .container div.chat-text div.error-box {
   position: relative;
