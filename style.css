@@ -618,20 +618,6 @@ body section.chat-box .container::before {
   pointer-events: none;
   background: linear-gradient(to bottom, rgba(var(--theme-color-rgb-darker), 0) 0%, rgba(var(--theme-color-rgb-darker), 1) 40%);
 }
-@media (min-width: 900px) {
-  body section.chat-box .container::after {
-    content: "";
-    display: block;
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 250px;
-    pointer-events: none;
-    background: linear-gradient(to top, rgba(var(--theme-color-rgb-darker), 0) 0%, rgba(var(--theme-color-rgb-darker), 1) 15%);
-  }
-}
 body section.chat-box .container div.chat-text {
   position: absolute;
   left: 0;
@@ -646,16 +632,15 @@ body section.chat-box .container div.chat-text {
     padding: 0 30px 200px;
   }
 }
-body section.chat-box .container div.chat-text div.information {
-  margin: 30px 0;
-}
 @media (min-width: 900px) {
   body section.chat-box .container div.chat-text div.information {
     position: sticky;
     z-index: 100;
     left: 0;
     right: 0;
-    top: 30px;
+    top: 0;
+    padding: 30px 0 15px;
+    background: linear-gradient(to top, rgba(var(--theme-color-rgb-darker), 0) 0%, rgba(var(--theme-color-rgb-darker), 1) 10%);
   }
 }
 body section.chat-box .container div.chat-text div.information h2 {
@@ -1065,6 +1050,7 @@ body section.chat-box .container div.chat-form {
   background: #fff;
   font-size: 0;
   border-radius: 20px;
+  transition: background-color 0.3s ease; /* 부드러운 전환 */
 }
 @media (min-width: 900px) {
   body section.chat-box .container div.chat-form {
@@ -1094,6 +1080,8 @@ body section.chat-box .container div.chat-form textarea {
   font-weight: 600;
   outline: none;
   resize: none;
+  background: transparent;
+  transition: color 0.3s ease, font-size 0.3s ease; /* 부드러운 전환 */
 }
 body section.chat-box .container div.chat-form textarea::-moz-placeholder {
   font-weight: 400;
@@ -1102,6 +1090,19 @@ body section.chat-box .container div.chat-form textarea::-moz-placeholder {
 body section.chat-box .container div.chat-form textarea::placeholder {
   font-weight: 400;
   color: #777;
+}
+body section.chat-box .container div.chat-form:has(textarea:disabled) {
+  background: rgba(0, 0, 0, 0.6);
+}
+body section.chat-box .container div.chat-form:has(textarea:disabled) textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  font-weight: 700;
+}
+body section.chat-box .container div.chat-form:has(textarea:disabled) textarea::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  font-weight: 700;
 }
 body section.chat-box .container div.chat-form button {
   vertical-align: top;
@@ -1119,7 +1120,6 @@ body section.chat-box .container div.chat-form span {
   vertical-align: top;
   width: 55px;
   height: 55px;
-  font-size: 16px;
   border: none;
   border-left: none;
   border-radius: 50%;
@@ -1127,11 +1127,16 @@ body section.chat-box .container div.chat-form span {
   background: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23000000'%3E%3Cpath d='M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q17 0 28.5 11.5T520-840q0 17-11.5 28.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160q133 0 226.5-93.5T800-480q0-17 11.5-28.5T840-520q17 0 28.5 11.5T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Z'/%3E%3C/svg%3E") no-repeat #f0f0f0 center;
   animation: rotate 1s linear infinite;
 }
-@keyframes rotate {
-  from {
-    transform: rotate(0deg); /* 시작 각도 */
-  }
-  to {
-    transform: rotate(360deg); /* 최종 각도 */
-  }
+body section.chat-box .container div.chat-form strong {
+  display: inline-block;
+  vertical-align: top;
+  width: 55px;
+  line-height: 55px;
+  text-align: center;
+  font-size: 14px;
+  border: none;
+  border-left: none;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.4);
 }/*# sourceMappingURL=style.css.map */
