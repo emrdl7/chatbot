@@ -627,9 +627,9 @@ body section.chat-box .container::before {
     left: 0;
     right: 0;
     top: 0;
-    height: 280px;
+    height: 250px;
     pointer-events: none;
-    background: linear-gradient(to top, rgba(var(--theme-color-rgb-darker), 0) 0%, rgba(var(--theme-color-rgb-darker), 1) 20%);
+    background: linear-gradient(to top, rgba(var(--theme-color-rgb-darker), 0) 0%, rgba(var(--theme-color-rgb-darker), 1) 15%);
   }
 }
 body section.chat-box .container div.chat-text {
