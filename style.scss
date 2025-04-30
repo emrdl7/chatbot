@@ -226,12 +226,12 @@ body {
           left: 0;
           right: 0;
           top: 0;
-          height: 250px;
+          height: 280px;
           pointer-events: none;
           background: linear-gradient(
             to top,
             rgba(var(--theme-color-rgb-darker), 0) 0%,
-            rgba(var(--theme-color-rgb-darker), 1) 30%
+            rgba(var(--theme-color-rgb-darker), 1) 20%
           );
         }
       }
