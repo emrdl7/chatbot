@@ -530,6 +530,7 @@ body section.head div.ex div.box p {
   word-break: keep-all;
   white-space: nowrap;
   text-overflow: ellipsis;
+  cursor: pointer;
 }
 body section.head div.ex div.box p::before {
   content: "Q. ";
@@ -876,6 +877,7 @@ body section.chat-box div.chat-form input {
   border: none;
   font-weight: 600;
   padding: 0 20px;
+  outline: none;
 }
 body section.chat-box div.chat-form input::-moz-placeholder {
   color: #89929B;
@@ -883,15 +885,18 @@ body section.chat-box div.chat-form input::-moz-placeholder {
 body section.chat-box div.chat-form input::placeholder {
   color: #89929B;
 }
-body section.chat-box div.chat-form input:has(input:disabled) {
-  background: rgba(0, 0, 0, 0.6);
+body section.chat-box div.chat-form:has(input:disabled) {
+  background: #aaa;
 }
-body section.chat-box div.chat-form input:has(input:disabled) input::-moz-placeholder {
+body section.chat-box div.chat-form:has(input:disabled) input {
+  background: transparent;
+}
+body section.chat-box div.chat-form:has(input:disabled) input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.8);
   font-size: 18px;
   font-weight: 700;
 }
-body section.chat-box div.chat-form input:has(input:disabled) input::placeholder {
+body section.chat-box div.chat-form:has(input:disabled) input::placeholder {
   color: rgba(255, 255, 255, 0.8);
   font-size: 18px;
   font-weight: 700;
@@ -899,7 +904,7 @@ body section.chat-box div.chat-form input:has(input:disabled) input::placeholder
 body section.chat-box div.chat-form button {
   position: absolute;
   right: 20px;
-  top: 50%;
+  top: 15px;
   transform: translateY(-50%);
   width: 60px;
   height: 60px;
@@ -914,8 +919,7 @@ body section.chat-box div.chat-form button {
 body section.chat-box div.chat-form span {
   position: absolute;
   right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 15px;
   width: 60px;
   height: 60px;
   border: none;
@@ -925,18 +929,25 @@ body section.chat-box div.chat-form span {
   background: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23000000'%3E%3Cpath d='M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q17 0 28.5 11.5T520-840q0 17-11.5 28.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160q133 0 226.5-93.5T800-480q0-17 11.5-28.5T840-520q17 0 28.5 11.5T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Z'/%3E%3C/svg%3E") no-repeat #f0f0f0 center;
   animation: rotate 1s linear infinite;
 }
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 body section.chat-box div.chat-form strong {
   position: absolute;
   right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 15px;
   width: 60px;
-  height: 60px;
+  line-height: 60px;
   text-align: center;
   font-size: 14px;
   border: none;
   border-left: none;
   border-radius: 10px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.6);
   color: rgba(255, 255, 255, 0.4);
 }/*# sourceMappingURL=style.css.map */
