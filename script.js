@@ -1,4 +1,5 @@
 let lastTouchEnd = 0;
+
 document.addEventListener(
   "touchend",
   function (e) {
@@ -25,9 +26,9 @@ document.querySelectorAll(".ex p").forEach((p) => {
 const box = document.getElementById("questionBox");
 const toggleBtn = document.getElementById("toggleButton");
 
-toggleBtn.addEventListener("click", () => {
-  box.classList.toggle("expanded");
-  toggleBtn.textContent = box.classList.contains("expanded")
-    ? "접기"
-    : "전체보기";
-});
+// toggleBtn.addEventListener("click", () => {
+//   box.classList.toggle("expanded");
+//   toggleBtn.textContent = box.classList.contains("expanded")
+//     ? "접기"
+//     : "전체보기";
+// });

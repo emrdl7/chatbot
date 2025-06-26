@@ -462,6 +462,8 @@ body section.head {
 @media (min-width: 1400px) {
   body section.head {
     display: block;
+    position: relative;
+    z-index: 10;
     width: 406px;
     margin-right: 38px;
     padding: 70px 0 0;
