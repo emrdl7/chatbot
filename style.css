@@ -407,6 +407,7 @@ body {
   body {
     display: flex;
     justify-content: center;
+    align-items: stretch;
   }
 }
 body::before {
@@ -542,6 +543,7 @@ body section.chat-box {
   text-align: right;
 }
 body section.chat-box .container {
+  height: 100%;
   min-height: 100dvh;
   display: inline-block;
   margin: 0;

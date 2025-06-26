@@ -29,6 +29,7 @@ body {
   @media (min-width: default.$screen-size-pc) {
     display: flex;
     justify-content: center;
+    align-items: stretch; 
     
   }
 
@@ -194,6 +195,7 @@ body {
     text-align: right;
 
     .container {
+    height:100%;
       min-height:100dvh;
       display: inline-block;
       margin: 0;
