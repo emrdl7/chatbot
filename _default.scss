@@ -1,52 +1,8 @@
 $min-width: 360px;
 $img-url: "../images";
 
-$screen-size-pc1: 900px;
-$screen-size-pc2: 1200px;
-$screen-size-pc3: 1400px;
-$screen-size-mobile: max($screen-size-pc1);
-
-$themes: (
-  theme1: (
-    color: #393939,
-    text1: #ffffff,
-    text2: #222222,
-  ),
-  theme2: (
-    color: #fefefe,
-    text1: #222222,
-    text2: #ffffff,
-  ),
-  theme3: (
-    color: #126eaf,
-    text1: #ffffff,
-    text2: #222222,
-  ),
-  theme4: (
-    color: #72af12,
-    text1: #ffffff,
-    text2: #222222,
-  ),
-);
-
-@each $name, $values in $themes {
-  $color: map-get($values, color);
-  $text1: map-get($values, text1);
-  $text2: map-get($values, text2);
-
-  $rgb: #{red($color)}, #{green($color)}, #{blue($color)};
-  $darker: mix(black, $color, 10%);
-  $rgb-darker: #{red($darker)}, #{green($darker)}, #{blue($darker)};
-
-  body.#{$name} {
-    --theme-color: #{$color};
-    --theme-color-rgb: #{$rgb};
-    --theme-color-rgb-darker: #{$rgb-darker};
-
-    --text-color1: #{$text1};
-    --text-color2: #{$text2};
-  }
-}
+$screen-size-pc: 1400px;
+$screen-size-mobile: max($screen-size-pc);
 
 *,
 *::before,
